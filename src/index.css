@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* cursor: url("https://www.svgrepo.com/show/170283/pointer.svg"); */
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.textContainer:hover {
+  .openText {
+    display: block;
+  }
+}
+/* #vkLogo {
+  mix-blend-mode: color-burn;
+} */

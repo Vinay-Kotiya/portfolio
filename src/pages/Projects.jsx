@@ -1,0 +1,99 @@
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+const Projects = () => {
+  // useGSAP(() => {
+  //   const textEffectOnHover = () => {
+  //     openText.style.display = "flex";
+  //   };
+  //   const removeTextEffect = () => {
+  //     openText.style.display = "none";
+  //   };
+  //   const specialTextEffect = () => {
+  //     openText.style.display = "flex";
+  //   };
+  //   const openText = document.querySelector(".openText");
+  //   const textCon = document.querySelector(".textContainer");
+  //   textCon.addEventListener("mouseover", textEffectOnHover);
+  //   textCon.addEventListener("mouseout", removeTextEffect);
+  //   openText.addEventListener("mouseover", textEffectOnHover);
+
+  //   return () => {
+  //     textCon.removeEventListener("mouseover", textEffectOnHover);
+  //     textCon.removeEventListener("mouseout", removeTextEffect);
+  //     openText.removeEventListener("mouseover", textEffectOnHover);
+  //   };
+  // }, []);
+
+  const projectsDetails = [
+    {
+      projectName: "Drive Clone",
+      projectDescription: " MongoDB,Express.js,React.js,Node.js",
+      screenSortUrl:
+        "https://res.cloudinary.com/dlf4xspeq/image/upload/v1737270580/uploads/bgq58tbcb6yo1nm9ivld.png",
+      deployedUrl: "https://driveclonemern.vercel.app",
+    },
+    {
+      projectName: "Thirtysixstudio clone Creative website",
+      projectDescription: "React.js,Tailwind Css",
+      screenSortUrl:
+        "https://res.cloudinary.com/dlf4xspeq/image/upload/v1737289345/uploads/zfmjrj5epyjosdmcicfr.png",
+      deployedUrl: "https://thirtysixstudioclone.vercel.app/",
+    },
+    {
+      projectName: "Employee Management System",
+      projectDescription: "React.js,Tailwind Css,Local Storage",
+      screenSortUrl:
+        "https://res.cloudinary.com/dlf4xspeq/image/upload/v1737289525/uploads/jvumn4uwkf9kuep9p4yu.png",
+      deployedUrl: "https://emsbyvk.vercel.app/",
+    },
+    {
+      projectName: "CRUD Operations",
+      projectDescription: "MERN Stack",
+      screenSortUrl:
+        "https://res.cloudinary.com/dlf4xspeq/image/upload/v1737301277/uploads/ufifry9fiawhiwpcgefb.png",
+      deployedUrl: "https://crudinmern.vercel.app/",
+    },
+  ];
+  return (
+    <>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <div
+        id="projects"
+        className=" bg-black flex justify-center items-center flex-col m-4"
+      >
+        <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59] ">
+          My Projects
+        </h1>
+        <div className="bg-[#090a08] h-full w-[80%] flex gap-10 flex-wrap justify-center">
+          {projectsDetails.map((item, idx) => {
+            return (
+              <div
+                key={idx}
+                className="bg-[#1B1B1E] rounded  md:w-1/4 m-2 shadow-sm shadow-[#ffbd59]"
+              >
+                <a href={item.deployedUrl} className="">
+                  <span className="textContainer text-xl flex justify-center   items-center hover:opacity-50  ">
+                    <span className="openText absolute hidden text-black  ">
+                      Click To Open
+                    </span>
+                    <img className="w-full p-2  " src={item.screenSortUrl} />
+                  </span>
+                </a>
+                <h2 className="text-center text-lg md:text-xl text-[#ffbd59]">
+                  {item.projectName}
+                </h2>
+                <p className=" text-sm md:text-sm text-center text-gray-400 ">
+                  {item.projectDescription}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Projects;
