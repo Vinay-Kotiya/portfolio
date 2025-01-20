@@ -120,7 +120,7 @@ const Contact = () => {
                 className="flex items-center"
               >
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <img id="vkLogo" src={myImage} className="h-24" />
+                  <img id="vkLogo" src={myImage} className="h-16" />
                 </span>
               </a>
             </div>

@@ -100,7 +100,7 @@ const Navbar = () => {
       </div>
       <div className="py-5 flex md:justify-around justify-between items-center px-5">
         {/* <h1 className="text-2xl font-bold"> */}
-        <img src={myImage} className="h-24" />
+        <img src={myImage} className="h-16" />
         {/* </h1> */}
         <img
           ref={menuIconIn}
