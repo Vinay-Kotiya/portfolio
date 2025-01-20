@@ -27,7 +27,7 @@ const Hero = () => {
             with technical precision to craft memorable user experiences.
           </h2>
           <a href="https://drive.google.com/file/d/1n1zFjMJh93_ZXaIrUNRHGLCiGvy9cwQK/view?usp=drive_link">
-            <button className="text-black mt-3  flex justify-center items-center bg-[#ffbd59] hover:bg-[#ae7b2d] focus:ring-4 focus:outline-none focus:ring-[#ffbd59] font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+            <button className="text-black mt-3  flex justify-center hover:shadow-md hover:shadow-[#ffbd59] border-black border-y-2 items-center bg-[#ffbd59] hover:bg-[#ae7b2d] focus:ring-4 focus:outline-none focus:ring-[#ffbd59] font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center">
               <h1 className="text-xl"> Resume</h1>
               <img
                 className="h-5 ml-2"
