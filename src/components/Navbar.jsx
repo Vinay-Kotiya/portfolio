@@ -79,7 +79,7 @@ const Navbar = () => {
                 <>
                   <li
                     key={index}
-                    className="border-2 border-white rounded w-full text-center p-3 text-[#ffbd59]"
+                    className="border-2 border-[#ffbd59] hover:border-black hover:text-black hover:bg-[#ffbd59] hover:shadow-md hover:shadow-slate-700 rounded-full  w-full text-center p-3 text-[#ffbd59]"
                   >
                     <Link
                       to={`${link.toLowerCase()}`}
@@ -107,7 +107,7 @@ const Navbar = () => {
           className="h-10 md:hidden"
           src="https://www.svgrepo.com/show/474904/menu.svg"
         />
-        <ul className="flex gap-5 hidden md:flex">
+        <ul className="flex gap-5 hidden md:flex text-[#ffbd59]">
           {/* <a href="about">
           <li className="list-none">About</li>
         </a>
@@ -129,7 +129,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={0}
                   duration={700}
-                  className="text-4xl font-bold md:text-base relative after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-[#ffbd59] after:left-0 after:bottom-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+                  className="text-4xl  font-thin md:text-base relative after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-[#ffbd59] after:left-0 after:bottom-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
                 >
                   {link}
                 </Link>
