@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <div id="about" className=" m-3 h-screen flex  items-center flex-col">
+      <div id="about" className=" m-3 md:h-screen  flex  items-center flex-col">
         <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59]">About</h1>
         <p className=" text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">
           Hi there! I'm Vinay, a passionate and creative web developer with a
