@@ -71,7 +71,7 @@ const Hero = () => {
       <div className="h-[85%]  flex justify-around items-center md:flex-row">
         <span ref={heroCon} className=" gap-10 justify-start">
           {/* <h1 className=" text-4xl my-4">Welcome to Portfolio </h1> */}
-          <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59]">
+          <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59] h-20 md:h-auto">
             {/* I'm a Full Stack Developer */}
             I'm a{" "}
             <span className="text-4xl md:text-5xl my-4 text-[#ffbd59]">
