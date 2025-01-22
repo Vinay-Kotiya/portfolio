@@ -28,7 +28,7 @@ const Hero = () => {
     ],
     loop: true, // Animation loops infinitely
     typeSpeed: 120, // Typing speed (in ms)
-    deleteSpeed: 80, // Deleting speed (in ms)
+    deleteSpeed: 150, // Deleting speed (in ms)
     delaySpeed: 1500, // Delay between words (in ms)
   });
   // alert(text);
