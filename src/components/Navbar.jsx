@@ -8,7 +8,40 @@ const Navbar = () => {
   const menuCon = useRef(null);
   const menuIconIn = useRef(null);
   const menuIconOut = useRef(null);
+  const menuList = useRef(null);
+  const logo = useRef(null);
   useGSAP(() => {
+    gsap.fromTo(
+      logo.current,
+      { opacity: 0, scale: 0.5 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: "power2.out",
+      }
+    );
+    gsap.fromTo(
+      menuList.current,
+      { opacity: 0, y: -100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+      }
+    );
+    gsap.fromTo(
+      menuIconIn.current,
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power2.out",
+      }
+    );
+
     const menuComeAnimation = () => {
       // alert("animation call");
       const page = menuCon.current;
@@ -63,7 +96,7 @@ const Navbar = () => {
     <>
       <div
         ref={menuCon}
-        className="absolute bg-black md:hidden hidden  h-screen w-full flex flex-col"
+        className="absolute bg-black z-50 hidden   h-screen w-full flex flex-col"
       >
         <span className="m-10 flex  justify-end">
           <img
@@ -100,14 +133,14 @@ const Navbar = () => {
       </div>
       <div className="py-5 flex md:justify-around justify-between items-center px-5">
         {/* <h1 className="text-2xl font-bold"> */}
-        <img src={myImage} className="h-16" />
+        <img src={myImage} ref={logo} className="h-16" />
         {/* </h1> */}
         <img
           ref={menuIconIn}
           className="h-10 md:hidden"
           src="https://www.svgrepo.com/show/474904/menu.svg"
         />
-        <ul className="flex gap-5 hidden md:flex ">
+        <ul ref={menuList} className="flex gap-5 hidden md:flex ">
           {/* <a href="about">
           <li className="list-none">About</li>
         </a>
@@ -129,7 +162,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={0}
                   duration={700}
-                  className="text-4xl text-[#fec166] hover:text-[#d5993e] font-thin md:text-base relative after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-[#ffbd59] after:left-0 after:bottom-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+                  className="text-2xl text-[#fec166] hover:text-[#d5993e] font-thin  relative after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-[#ffbd59] after:left-0 after:bottom-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
                 >
                   {link}
                 </Link>

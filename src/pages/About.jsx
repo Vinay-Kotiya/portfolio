@@ -1,12 +1,63 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const About = () => {
+  const about = useRef(null);
+
+  useGSAP(() => {
+    const firstPart = document.querySelectorAll(".firstPart");
+    gsap.fromTo(
+      firstPart,
+      { opacity: 0, y: 100, scale: 0.8 }, // Starting values
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: about.current, // Element to trigger animation
+          start: "top 70%", // Trigger when top of element hits 80% of viewport
+          end: "top 40%", // End when top hits 50% of viewport
+          scrub: true, // Smooth scrubbing effect
+          // once: true, // Only once
+          // markers: true,
+        },
+      }
+    );
+    const GAni = document.querySelectorAll(".GAni");
+    gsap.fromTo(
+      GAni,
+      { opacity: 0, y: 100, scale: 0.8 }, // Starting values
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: about.current, // Element to trigger animation
+          start: "top 30%", // Trigger when top of element hits 80% of viewport
+          end: "top 0%", // End when top hits 50% of viewport
+          scrub: true, // Smooth scrubbing effect
+          // once: true, // Only once
+          // markers: true,
+        },
+      }
+    );
+  }, []);
   return (
     <>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <div id="about" className=" m-3 md:h-screen  flex  items-center flex-col">
-        <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59]">About</h1>
-        <p className=" text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">
+      <div
+        ref={about}
+        id="about"
+        className=" m-3 md:h-screen  flex  items-center flex-col"
+      >
+        <h1 className="firstPart text-4xl md:text-5xl my-4 text-[#ffbd59]">
+          About
+        </h1>
+        <p className="firstPart text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">
           Hi there! I'm Vinay, a passionate and creative web developer with a
           strong foundation in front-end development and full-stack expertise
           using the MERN stack. With skills in HTML, CSS, JavaScript, ReactJS,
@@ -23,8 +74,11 @@ const About = () => {
           brainstorming creative solutions to complex problems.
           <br /> Let's build something amazing together!
         </p>
-        <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59]"> Education</h1>
-        <span className="flex justify-center items-start flex-col">
+        <h1 className="GAni text-4xl md:text-5xl my-4 text-[#ffbd59]">
+          {" "}
+          Education
+        </h1>
+        <span className="GAni flex justify-center items-start flex-col">
           <h2 className=" text-lg md:text-2xl md:mx-10 my-4 text-gray-100 ">
             Bachelor of Computer Applications (BCA)
           </h2>

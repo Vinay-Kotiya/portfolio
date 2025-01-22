@@ -1,9 +1,74 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const containerRef = useRef(null);
   const frontendRef = useRef(null);
+
+  useGSAP(() => {
+    const mainHeading = document.querySelectorAll(".mainHeading");
+    const mainPage = document.getElementById("skills");
+
+    gsap.fromTo(
+      mainHeading,
+      { opacity: 0, y: 100, scale: 0.9 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: mainPage,
+          start: "top 70%",
+          end: "top 50%",
+          // once: true,
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+    const frontendSkills = document.querySelectorAll(".frontendSkills");
+    gsap.fromTo(
+      frontendSkills,
+      { opacity: 0, scale: 0.8, y: 100 },
+      {
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: frontendSkills,
+          start: "top 80%",
+          end: "top 60%",
+          scrub: true,
+          once: true,
+          // markers: true,
+        },
+      }
+    );
+    const backendSkills = document.querySelectorAll(".backendSkills");
+    gsap.fromTo(
+      backendSkills,
+      { opacity: 0, scale: 0.8, y: 100 },
+      {
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: backendSkills,
+          start: "top 80%",
+          end: "top 70%",
+          once: true,
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  });
 
   useEffect(() => {
     const container = containerRef.current;
@@ -107,13 +172,15 @@ const Skills = () => {
         className="h-screen flex justify-center items-center flex-col mx-5 p
       -4"
       >
-        <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59]  ">
+        <h1 className="mainHeading text-4xl md:text-5xl my-4 text-[#ffbd59]  ">
           My Skills
         </h1>
-        <hr className="w-[30%] my-8 bg-gray-200 border-1 dark:bg-gray-700"></hr>
-        <h1 className="text-xl  md:text-2xl  text-[#ffbd59]">Front-end</h1>
+        <hr className="mainHeading w-[30%] my-8 bg-gray-200 border-1 dark:bg-gray-700"></hr>
+        <h1 className="frontendSkills text-xl  md:text-2xl  text-[#ffbd59]">
+          Front-end
+        </h1>
 
-        <div className="bg-[#1B1B1E] md:w-[60%] w-full  overflow-hidden m-4 rounded shadow-inner shadow-[#ffbd59]">
+        <div className="frontendSkills bg-[#1B1B1E] md:w-[60%] w-full  overflow-hidden m-4 rounded shadow-inner shadow-[#ffbd59]">
           <div ref={frontendRef} className="flex mx-4 gap-3 p-3  ">
             {frontend.map((item, idx) => {
               return (
@@ -128,8 +195,10 @@ const Skills = () => {
             })}
           </div>
         </div>
-        <h1 className="text-xl  md:text-2xl  text-[#ffbd59]">Back-end</h1>
-        <div className="bg-[#1B1B1E] md:w-[60%] w-full  overflow-hidden m-4 rounded shadow-inner shadow-[#ffbd59]">
+        <h1 className="backendSkills text-xl  md:text-2xl  text-[#ffbd59]">
+          Back-end
+        </h1>
+        <div className="backendSkills bg-[#1B1B1E] md:w-[60%] w-full  overflow-hidden m-4 rounded shadow-inner shadow-[#ffbd59]">
           <div ref={containerRef} className="flex mx-4 gap-3 p-3  ">
             {backendSkills.map((item, idx) => {
               return (

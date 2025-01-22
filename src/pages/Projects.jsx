@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   // useGSAP(() => {
   //   const textEffectOnHover = () => {
@@ -25,18 +26,60 @@ const Projects = () => {
   //     openText.removeEventListener("mouseover", textEffectOnHover);
   //   };
   // }, []);
+  useGSAP(() => {
+    const HeadingPart = document.querySelectorAll(".HeadingPart");
+    gsap.fromTo(
+      HeadingPart,
+      { opacity: 0, y: 100, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: HeadingPart,
+          start: "top 70%",
+          end: "top 50%",
+          scrub: true,
+          once: true,
+          // markers: true,
+        },
+      }
+    );
+    const Projects = document.querySelectorAll(".Projects");
+    gsap.fromTo(
+      Projects,
+      { opacity: 0, y: 100, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        stagger: 1,
+        scrollTrigger: {
+          trigger: HeadingPart,
+          start: "top 70%",
+          end: "top 50%",
+          scrub: true,
+
+          // markers: true,
+        },
+      }
+    );
+  }, []);
 
   const projectsDetails = [
     {
       projectName: "Drive Clone",
-      projectDescription: " MongoDB,Express.js,React.js,Node.js",
+      projectDescription:
+        " MongoDB,Express.js,React.js,Node.js and Cloudinary to store files ",
       screenSortUrl:
         "https://res.cloudinary.com/dlf4xspeq/image/upload/v1737270580/uploads/bgq58tbcb6yo1nm9ivld.png",
       deployedUrl: "https://driveclonemern.vercel.app",
     },
     {
       projectName: "Thirtysixstudio clone Creative website",
-      projectDescription: "React.js,Tailwind Css",
+      projectDescription: "React.js,Tailwind Css,Canvas",
       screenSortUrl:
         "https://res.cloudinary.com/dlf4xspeq/image/upload/v1737289345/uploads/zfmjrj5epyjosdmcicfr.png",
       deployedUrl: "https://thirtysixstudioclone.vercel.app/",
@@ -63,15 +106,15 @@ const Projects = () => {
         id="projects"
         className=" bg-black flex justify-center items-center flex-col m-4"
       >
-        <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59] ">
+        <h1 className="HeadingPart text-4xl md:text-5xl my-4 text-[#ffbd59] ">
           My Projects
         </h1>
-        <div className="bg-[#090a08] h-full w-[80%] flex gap-10 flex-wrap justify-center">
+        <div className="HeadingPart bg-[#090a08] h-full w-[80%] flex gap-10 flex-wrap justify-center">
           {projectsDetails.map((item, idx) => {
             return (
               <div
                 key={idx}
-                className="bg-[#1B1B1E] rounded  md:w-1/4 m-2 shadow-sm shadow-[#ffbd59]"
+                className="Projects bg-[#1B1B1E] rounded  md:w-1/4 m-2 shadow-sm shadow-[#ffbd59]"
               >
                 <a href={item.deployedUrl} className="">
                   <span className="textContainer text-xl flex justify-center   items-center hover:opacity-50  ">

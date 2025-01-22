@@ -1,6 +1,10 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import myImage from "../assets/vinaykotiya_logo.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const form = useRef(null);
@@ -25,6 +29,45 @@ const Contact = () => {
         }
       );
   };
+  useGSAP(() => {
+    const headingAnimation = document.querySelectorAll(".headingAnimation");
+    gsap.fromTo(
+      headingAnimation,
+      { opacity: 0, y: 100, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: headingAnimation,
+          start: "top 80%",
+          end: "top 60%",
+          scrub: true,
+          // once: true,
+          // markers: true,
+        },
+      }
+    );
+    const contactForm = document.querySelector(".contactForm");
+    gsap.fromTo(
+      contactForm,
+      { y: 100, scale: 0.8, opacity: 0 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: contactForm,
+          start: "top 80%",
+          end: "top 60%",
+          scrub: true,
+          once: true,
+        },
+      }
+    );
+  }, []);
   return (
     <>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -32,19 +75,19 @@ const Contact = () => {
         id="contact"
         className="h-screen flex justify-center flex-col items-center "
       >
-        <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59] ">
+        <h1 className=" headingAnimation text-4xl md:text-5xl my-4 text-[#ffbd59] ">
           Contact Me
         </h1>
-        <h2 className=" text-xl my-4 text-gray-400 text-center max-w-screen-md">
+        <h2 className="headingAnimation text-xl my-4 text-gray-400 text-center max-w-screen-md">
           Let's build something amazing together!
         </h2>
 
-        <div className="bg-white dark:bg-[#090C08] m-10 text-center w-[70%]  rounded shadow-sm shadow-[#ffbd59]">
+        <div className="contactForm bg-[#090C08] m-10 text-center w-[70%]  rounded shadow-sm shadow-[#ffbd59]">
           <form ref={form} onSubmit={sendEmail} className="m-3">
             <div className=" gap-6 mb-6">
               <div>
                 <label
-                  for="first_name"
+                  htmlFor="first_name"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   First name
@@ -65,7 +108,7 @@ const Contact = () => {
             </div>
             <div className="mb-6">
               <label
-                for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Email address
@@ -85,7 +128,7 @@ const Contact = () => {
             </div>
 
             <label
-              for="message"
+              htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Your message
@@ -111,7 +154,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <footer className="bg-white dark:bg-[#090C08] ">
+      <footer className="bg-[#090C08] ">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
@@ -124,7 +167,17 @@ const Contact = () => {
                 </span>
               </a>
             </div>
+
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  Contact me
+                </h2>
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-4">+992-404-1585</li>
+                  <li>vinaykotiya77@gmail.com</li>
+                </ul>
+              </div>
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Resources
