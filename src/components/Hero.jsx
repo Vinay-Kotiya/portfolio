@@ -18,7 +18,7 @@ const Hero = () => {
   //   typeSpeed: 120,
   //   deleteSpeed: 80,
   // });
-  const { text } = useTypewriter({
+  const [text] = useTypewriter({
     words: [
       "Front-end Developer",
       "MERN Stack Developer",
@@ -72,10 +72,12 @@ const Hero = () => {
         <span ref={heroCon} className=" gap-10 justify-start">
           {/* <h1 className=" text-4xl my-4">Welcome to Portfolio </h1> */}
           <h1 className="text-4xl md:text-5xl my-4 text-[#ffbd59]">
-            I'm a Full Stack Developer
-            {/* I'm a{" "} */}
-            {/* <span className="text-4xl md:text-5xl my-4 text-white">{text}</span> */}
-            {/* <Cursor /> */}
+            {/* I'm a Full Stack Developer */}
+            I'm a{" "}
+            <span className="text-4xl md:text-5xl my-4 text-[#ffbd59]">
+              {text}
+            </span>
+            <Cursor />
           </h1>
 
           <h2 className=" text-xl my-4 text-gray-400 max-w-screen-md">
