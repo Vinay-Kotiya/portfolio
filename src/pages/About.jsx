@@ -52,7 +52,7 @@ const About = () => {
       <div
         ref={about}
         id="about"
-        className=" m-3 md:h-screen  flex  items-center flex-col"
+        className=" m-3   flex  items-center flex-col"
       >
         <h1 className="firstPart text-4xl md:text-5xl my-4 text-[#ffbd59]">
           About
@@ -79,13 +79,13 @@ const About = () => {
           Education
         </h1>
         <span className="GAni flex justify-center items-start flex-col">
-          <h2 className=" text-lg md:text-2xl md:mx-10 my-4 text-gray-100 ">
+          <h2 className=" text-lg md:text-2xl md:mx-10 my-4 text-gray-400 underline ">
             Bachelor of Computer Applications (BCA)
           </h2>
-          <h3 className=" text-lg md:text-xl md:mx-10 my-4 text-gray-100 ">
+          <h3 className=" text-lg md:text-xl md:mx-10 my-4 text-gray-400 underline ">
             Dr. V. R. Godhaniya IT College, Porbandar
           </h3>
-          <h3 className=" text-lg md:text-xl md:mx-10 my-4 text-gray-100 ">
+          <h3 className=" text-lg md:text-xl md:mx-10 my-4 text-gray-400 underline ">
             2023 - Present
           </h3>
           <li className=" text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">

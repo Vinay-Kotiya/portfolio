@@ -104,12 +104,12 @@ const Projects = () => {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div
         id="projects"
-        className=" bg-black flex justify-center items-center flex-col m-4"
+        className="  flex justify-center items-center flex-col m-4"
       >
         <h1 className="HeadingPart text-4xl md:text-5xl my-4 text-[#ffbd59] ">
           My Projects
         </h1>
-        <div className="HeadingPart bg-[#090a08] h-full w-[80%] flex gap-10 flex-wrap justify-center">
+        <div className="HeadingPart bg-[#090a08] rounded h-full w-[80%] flex gap-10 flex-wrap justify-center">
           {projectsDetails.map((item, idx) => {
             return (
               <div

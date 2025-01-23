@@ -1,15 +1,21 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import myImage from "../assets/vinaykotiya_logo.png";
+import dayImg from "../assets/day-of-sun.svg";
+import nightImg from "../assets/moon-stars.svg";
 
 const Navbar = () => {
   const menuCon = useRef(null);
   const menuIconIn = useRef(null);
   const menuIconOut = useRef(null);
   const menuList = useRef(null);
+  // State to hold the current icon
+  const [icon, setIcon] = useState(dayImg); // Default to day icon
+
   const logo = useRef(null);
+
   useGSAP(() => {
     gsap.fromTo(
       logo.current,
@@ -92,6 +98,30 @@ const Navbar = () => {
       allMenuLinks.removeEventListener("click", menuOutAnimation);
     };
   }, []);
+
+  // const button = document.querySelector(".btn");
+  // const Icon = document.querySelector(".Icon");
+  // const day = dayImg;
+  // const night = nightImg;
+  // button.addEventListener("click", function () {
+  //   if (Icon.src.includes(night)) {
+  //     Icon.src = day;
+  //   } else {
+  //     Icon.src = night;
+  //   }
+  // });
+  // Toggle function to switch icons
+  const toggleIcon = () => {
+    setIcon((prevIcon) => (prevIcon === dayImg ? nightImg : dayImg));
+    if (icon == dayImg) {
+      document.body.style.backgroundColor = "white";
+      // alert("day mode");
+    } else {
+      // alert("night mode");
+      document.body.style.backgroundColor = "black";
+    }
+  };
+
   return (
     <>
       <div
@@ -132,14 +162,22 @@ const Navbar = () => {
         </div>
       </div>
       <div className="py-5 flex md:justify-around justify-between items-center px-5">
-        {/* <h1 className="text-2xl font-bold"> */}
-        <img src={myImage} ref={logo} className="h-16" />
-        {/* </h1> */}
         <img
-          ref={menuIconIn}
-          className="h-10 md:hidden"
-          src="https://www.svgrepo.com/show/474904/menu.svg"
+          src={myImage}
+          ref={logo}
+          className="h-16   drop-shadow-[0_5px_7px_rgba(0,0,0)] "
         />
+
+        <span className="flex gap-5  md:hidden">
+          <button onClick={toggleIcon} className="btn">
+            <img className=" h-8  " src={icon} />
+          </button>
+          <img
+            ref={menuIconIn}
+            className="h-10"
+            src="https://www.svgrepo.com/show/474904/menu.svg"
+          />
+        </span>
         <ul ref={menuList} className="flex gap-5 hidden md:flex ">
           {/* <a href="about">
           <li className="list-none">About</li>
@@ -169,6 +207,9 @@ const Navbar = () => {
               </li>
             )
           )}
+          <button onClick={toggleIcon} className="btn">
+            <img className=" h-8 " src={icon} />
+          </button>
         </ul>
       </div>
     </>

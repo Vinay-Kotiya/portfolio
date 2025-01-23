@@ -28,7 +28,7 @@ const Hero = () => {
     ],
     loop: true, // Animation loops infinitely
     typeSpeed: 120, // Typing speed (in ms)
-    deleteSpeed: 150, // Deleting speed (in ms)
+    deleteSpeed: 50, // Deleting speed (in ms)
     delaySpeed: 1500, // Delay between words (in ms)
   });
   // alert(text);
@@ -110,11 +110,11 @@ const Hero = () => {
             src="https://www.svgrepo.com/show/354000/linkedin-icon.svg"
           ></img> */}
         </span>
-        <img
+        {/* <img
           ref={heroImg}
-          className="right-0 h-[50%] md:h-[80%] hidden md:flex text-center rounded-lg"
+          className="right-0 h-[50%] md:h-[80%] hidden lg:flex sm:hidden text-center rounded-lg"
           src={profilePic}
-        />
+        /> */}
       </div>
     </div>
   );

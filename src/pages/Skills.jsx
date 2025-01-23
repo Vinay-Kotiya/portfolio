@@ -175,7 +175,7 @@ const Skills = () => {
         <h1 className="mainHeading text-4xl md:text-5xl my-4 text-[#ffbd59]  ">
           My Skills
         </h1>
-        <hr className="mainHeading w-[30%] my-8 bg-gray-200 border-1 dark:bg-gray-700"></hr>
+        <hr className="mainHeading w-[30%] my-8 bg-gray-200 border-1 dark:bg-gray-800"></hr>
         <h1 className="frontendSkills text-xl  md:text-2xl  text-[#ffbd59]">
           Front-end
         </h1>
@@ -189,7 +189,7 @@ const Skills = () => {
                   className="border-2 border-[#ffbd59] rounded bg-[#090C08] p-2"
                 >
                   <img className="h-30 min-w-20" src={item.iconUrl} />
-                  <p className="text-center">{item.name}</p>
+                  <p className="text-center text-white">{item.name}</p>
                 </span>
               );
             })}
@@ -207,7 +207,7 @@ const Skills = () => {
                   className="border-2 border-[#ffbd59] rounded bg-[#090C08] p-2"
                 >
                   <img className="h-30 min-w-20" src={item.iconUrl} />
-                  <p className="text-center">{item.name}</p>
+                  <p className="text-center text-white">{item.name}</p>
                 </span>
               );
             })}
