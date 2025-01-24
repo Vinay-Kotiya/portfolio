@@ -162,7 +162,7 @@ const Contact = () => {
                 href="https://vinaykotiyaportfolio.vercel.app"
                 className="flex items-center"
               >
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                   <img id="vkLogo" src={myImage} className="h-16" />
                 </span>
               </a>
@@ -170,7 +170,7 @@ const Contact = () => {
 
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                   Contact me
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -179,7 +179,7 @@ const Contact = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
                   Resources
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">

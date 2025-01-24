@@ -110,11 +110,11 @@ const Hero = () => {
             src="https://www.svgrepo.com/show/354000/linkedin-icon.svg"
           ></img> */}
         </span>
-        {/* <img
+        <img
           ref={heroImg}
-          className="right-0 h-[50%] md:h-[80%] hidden lg:flex sm:hidden text-center rounded-lg"
+          className="right-0 h-[50%] md:h-[80%] hidden bg-black lg:flex sm:hidden text-center rounded-lg"
           src={profilePic}
-        /> */}
+        />
       </div>
     </div>
   );
