@@ -19,13 +19,7 @@ const Hero = () => {
   //   deleteSpeed: 80,
   // });
   const [text] = useTypewriter({
-    words: [
-      "Front-end Developer",
-      "MERN Stack Developer",
-      "Freelancer",
-      "React Developer",
-      "Web Developer",
-    ],
+    words: ["Full Stack Developer", "Freelancer", "React.JS Developer"],
     loop: true, // Animation loops infinitely
     typeSpeed: 120, // Typing speed (in ms)
     deleteSpeed: 50, // Deleting speed (in ms)
