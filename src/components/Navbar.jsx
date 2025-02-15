@@ -115,10 +115,12 @@ const Navbar = () => {
     setIcon((prevIcon) => (prevIcon === dayImg ? nightImg : dayImg));
     if (icon == dayImg) {
       document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
       // alert("day mode");
     } else {
       // alert("night mode");
       document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
     }
   };
 
@@ -136,7 +138,7 @@ const Navbar = () => {
           />
         </span>
         <div className="flex w-full">
-          <ul className="menuListAnimation flex gap-1 flex md:hidden flex-col justify-center items-center w-full">
+          <ul className="menuListAnimation flex gap-1 flex md:hidden flex-col justify-center items-center w-full drop-shadow-[0.5px_2px_2px_rgba(1,1,1,1)]">
             {["Home", "About", "Skills", "Projects", "Contact"].map(
               (link, index) => (
                 <>
@@ -200,7 +202,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={0}
                   duration={700}
-                  className="text-2xl text-[#fec166] hover:text-[#d5993e] font-thin  relative after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-[#ffbd59] after:left-0 after:bottom-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
+                  className="text-2xl text-[#fec166] drop-shadow-[0_1px_1px_rgba(1,1,1,1)] hover:text-[#d5993e] font-bold gap-7  relative after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-[#ffbd59] after:left-0 after:bottom-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left"
                 >
                   {link}
                 </Link>

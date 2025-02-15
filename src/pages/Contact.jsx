@@ -75,7 +75,7 @@ const Contact = () => {
         id="contact"
         className="h-screen flex justify-center flex-col items-center "
       >
-        <h1 className=" headingAnimation text-4xl md:text-5xl my-4 text-[#ffbd59] ">
+        <h1 className=" headingAnimation text-4xl md:text-5xl my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
           Contact Me
         </h1>
         <h2 className="headingAnimation text-xl my-4 text-gray-400 text-center max-w-screen-md">

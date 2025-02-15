@@ -172,11 +172,11 @@ const Skills = () => {
         className="h-screen flex justify-center items-center flex-col mx-5 p
       -4"
       >
-        <h1 className="mainHeading text-4xl md:text-5xl my-4 text-[#ffbd59]  ">
+        <h1 className="mainHeading text-4xl md:text-5xl my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)] ">
           My Skills
         </h1>
         <hr className="mainHeading w-[30%] my-8 bg-gray-200 border-1 dark:bg-gray-800"></hr>
-        <h1 className="frontendSkills text-xl  md:text-2xl  text-[#ffbd59]">
+        <h1 className="frontendSkills text-xl  md:text-2xl  text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
           Front-end
         </h1>
 
@@ -195,7 +195,7 @@ const Skills = () => {
             })}
           </div>
         </div>
-        <h1 className="backendSkills text-xl  md:text-2xl  text-[#ffbd59]">
+        <h1 className="backendSkills text-xl  md:text-2xl  text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
           Back-end
         </h1>
         <div className="backendSkills bg-[#1B1B1E] md:w-[60%] w-full  overflow-hidden m-4 rounded shadow-inner shadow-[#ffbd59]">

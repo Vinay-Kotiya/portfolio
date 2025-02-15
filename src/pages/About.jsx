@@ -54,10 +54,10 @@ const About = () => {
         id="about"
         className=" m-3   flex  items-center flex-col"
       >
-        <h1 className="firstPart text-4xl md:text-5xl my-4 text-[#ffbd59]">
+        <h1 className="firstPart text-4xl md:text-5xl my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
           About
         </h1>
-        <p className="firstPart text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">
+        <p className="firstPart text-sm md:text-xl md:mx-10 my-4  ">
           Hi there! I'm Vinay, a passionate and creative web developer with a
           strong foundation in front-end development and full-stack expertise
           using the MERN stack. With skills in HTML, CSS, JavaScript, ReactJS,
@@ -74,25 +74,24 @@ const About = () => {
           brainstorming creative solutions to complex problems.
           <br /> Let's build something amazing together!
         </p>
-        <h1 className="GAni text-4xl md:text-5xl my-4 text-[#ffbd59]">
-          {" "}
+        <h1 className="GAni text-4xl md:text-5xl my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
           Education
         </h1>
         <span className="GAni flex justify-center items-start flex-col">
-          <h2 className=" text-lg md:text-2xl md:mx-10 my-4 text-gray-400 underline ">
+          <h2 className=" text-lg md:text-2xl md:mx-10 my-4  underline ">
             Bachelor of Computer Applications (BCA)
           </h2>
-          <h3 className=" text-lg md:text-xl md:mx-10 my-4 text-gray-400 underline ">
+          <h3 className=" text-lg md:text-xl md:mx-10 my-4  underline ">
             Dr. V. R. Godhaniya IT College, Porbandar
           </h3>
-          <h3 className=" text-lg md:text-xl md:mx-10 my-4 text-gray-400 underline ">
+          <h3 className=" text-lg md:text-xl md:mx-10 my-4  underline ">
             2023 - Present
           </h3>
-          <li className=" text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">
+          <li className=" text-sm md:text-xl md:mx-10 my-4  ">
             Pursuing a degree in computer applications with a focus on web
             development, programming, and database management.
           </li>
-          <li className=" text-sm md:text-xl md:mx-10 my-4 text-gray-400 ">
+          <li className=" text-sm md:text-xl md:mx-10 my-4  ">
             Actively involved in projects and learning advanced technologies
             like the MERN stack.
           </li>

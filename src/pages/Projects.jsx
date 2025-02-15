@@ -92,6 +92,13 @@ const Projects = () => {
       deployedUrl: "https://emsbyvk.vercel.app/",
     },
     {
+      projectName: "Chess Clock",
+      projectDescription: "Developed Using DeepSeek AI ",
+      screenSortUrl:
+        " https://res.cloudinary.com/dlf4xspeq/image/upload/v1739619495/uploads/e8jdzxaxrq9byv1f2jg7.png",
+      deployedUrl: "https://chessclockbyvk.vercel.app/",
+    },
+    {
       projectName: "CRUD Operations",
       projectDescription: "MERN Stack",
       screenSortUrl:
@@ -106,7 +113,7 @@ const Projects = () => {
         id="projects"
         className="  flex justify-center items-center flex-col m-4"
       >
-        <h1 className="HeadingPart text-4xl md:text-5xl my-4 text-[#ffbd59] ">
+        <h1 className="HeadingPart text-4xl md:text-5xl my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)] ">
           My Projects
         </h1>
         <div className="HeadingPart bg-[#090a08] rounded h-full w-[80%] flex gap-10 flex-wrap justify-center">
@@ -124,7 +131,7 @@ const Projects = () => {
                     <img className="w-full p-2  " src={item.screenSortUrl} />
                   </span>
                 </a>
-                <h2 className="text-center text-lg md:text-xl text-[#ffbd59]">
+                <h2 className="text-center text-lg md:text-xl text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
                   {item.projectName}
                 </h2>
                 <p className=" text-sm md:text-sm text-center text-gray-400 ">
