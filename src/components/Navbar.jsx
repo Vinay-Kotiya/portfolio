@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import myImage from "../assets/vinaykotiya_logo.png";
 import dayImg from "../assets/day-of-sun.svg";
 import nightImg from "../assets/moon-stars.svg";
+import { motion, useScroll } from "motion/react";
 
 const Navbar = () => {
   const menuCon = useRef(null);
@@ -123,12 +124,17 @@ const Navbar = () => {
       document.body.style.color = "white";
     }
   };
+  const scrollProgress = useScroll().scrollYProgress;
 
   return (
     <>
+      <motion.div
+        style={{ scaleX: scrollProgress }}
+        className="md:h-2 h-1 rounded z-50 bg-[#ffbd59] w-full fixed top-0 origin-left left-0"
+      ></motion.div>
       <div
         ref={menuCon}
-        className="absolute bg-black z-50 hidden   h-screen w-full flex flex-col"
+        className="absolute bg-black z-50 hidden  h-screen w-full flex flex-col"
       >
         <span className="m-10 flex  justify-end">
           <img

@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import { motion, useScroll } from "motion/react";
 
 function App() {
   return (
