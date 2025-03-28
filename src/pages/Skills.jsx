@@ -160,6 +160,11 @@ const Skills = () => {
       iconUrl: "https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg",
     },
     {
+      name: "Motion",
+      iconUrl:
+        "https://user-images.githubusercontent.com/7850794/164965509-2a8dc49e-2ed7-4243-a2c9-481b03bbc31a.png",
+    },
+    {
       name: "Wordpress",
       iconUrl: "https://www.svgrepo.com/show/349568/wordpress.svg",
     },

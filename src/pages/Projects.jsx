@@ -78,6 +78,13 @@ const Projects = () => {
       deployedUrl: "https://driveclonemern.vercel.app",
     },
     {
+      projectName: "AI Chat Bot (vnyAI)",
+      projectDescription: "Develoed using MERN Stack with DeepSeek API",
+      screenSortUrl:
+        "https://res.cloudinary.com/dlf4xspeq/image/upload/v1743141304/uploads/dpyotcoldrgt3fm9tnpe.png",
+      deployedUrl: "https://vnyai.vercel.app/",
+    },
+    {
       projectName: "Thirtysixstudio clone Creative website",
       projectDescription: "React.js,Tailwind Css,Canvas",
       screenSortUrl:

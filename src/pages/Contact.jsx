@@ -175,7 +175,7 @@ const Contact = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">+992-404-1585</li>
-                  <li>vinaykotiya77@gmail.com</li>
+                  {/* <li>vinaykotiya77@gmail.com</li> */}
                 </ul>
               </div>
               <div>
