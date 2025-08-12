@@ -73,7 +73,7 @@ const Contact = () => {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div
         id="contact"
-        className="h-screen flex justify-center flex-col items-center "
+        className="h-screen flex justify-center flex-col items-center m-5 "
       >
         <h1 className=" headingAnimation text-4xl md:text-5xl my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
           Contact Me

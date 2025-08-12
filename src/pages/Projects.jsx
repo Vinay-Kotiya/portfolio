@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import mysteryMessagesImage from "../assets/mystery_messages.png";
 gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   // useGSAP(() => {
@@ -69,6 +70,29 @@ const Projects = () => {
   }, []);
 
   const projectsDetails = [
+    {
+      projectName: "Mystery Messages",
+      projectDescription: "Full Stack app with Next.Js & NextAuth ",
+      screenSortUrl:
+        "https://i.ibb.co/ns2MwQ1H/Screenshot-2025-08-13-004149.png",
+      deployedUrl: "https://mysterymessagesbyvk.vercel.app/",
+    },
+    {
+      projectName: "Quiz Game",
+      projectDescription:
+        "React.Js, Tailwind css, Spline (Project of Skillsvarz 0.1 Hackathon)",
+      screenSortUrl:
+        "https://i.ibb.co/HpLzJJzd/Screenshot-2025-08-13-004629.png",
+      deployedUrl: "https://quizgamebyvk.vercel.app/",
+    },
+    {
+      projectName: "Annapurna Restaurant",
+      projectDescription:
+        "React.Js, Tailwind css, ReactBits (Project of Skillsvarz 0.1 Hackathon)",
+      screenSortUrl:
+        "https://i.ibb.co/Y4tmBxVP/Screenshot-2025-08-13-004747.png",
+      deployedUrl: "https://annapurnarestaurant.vercel.app/",
+    },
     {
       projectName: "Drive Clone",
       projectDescription:

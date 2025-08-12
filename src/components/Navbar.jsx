@@ -199,7 +199,7 @@ const Navbar = () => {
         <a href="">
           <li className="list-none">Contact</li>
         </a> */}
-          {["Home", "About", "Skills", "Projects", "Contact"].map(
+          {["Home", "Experience", "Skills", "Projects", "Contact"].map(
             (link, index) => (
               <li key={index}>
                 <Link

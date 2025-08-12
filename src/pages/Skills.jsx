@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -146,6 +146,11 @@ const Skills = () => {
     {
       name: "ReactJS",
       iconUrl: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
+    },
+    {
+      name: "Next.Js",
+      iconUrl:
+        "https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000",
     },
     {
       name: "Tailwind",
