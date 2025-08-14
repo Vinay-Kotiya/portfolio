@@ -52,9 +52,9 @@ const About = () => {
       <div
         ref={about}
         id="experience"
-        className="m-5 sm:m-0  flex  items-center flex-col  w-full "
+        className=" flex  items-center flex-col  w-full "
       >
-        <span className="md:w-[80%]  flex flex-col ">
+        <span className="md:w-[80%] m-5  flex flex-col ">
           <h1 className="firstPart text-4xl md:text-5xl text-center my-4 text-[#ffbd59] drop-shadow-[0_1px_1px_rgba(1,1,1,1)]">
             Experience
           </h1>
