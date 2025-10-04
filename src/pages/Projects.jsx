@@ -154,7 +154,7 @@ const Projects = () => {
                 key={idx}
                 className="Projects bg-[#1B1B1E] rounded  md:w-1/4 m-2 shadow-sm shadow-[#ffbd59]"
               >
-                <a href={item.deployedUrl} className="">
+                <a href={item.deployedUrl} className="" target="_blank">
                   <span className="textContainer text-xl flex justify-center   items-center hover:opacity-50  ">
                     <span className="openText absolute hidden text-black  ">
                       Click To Open

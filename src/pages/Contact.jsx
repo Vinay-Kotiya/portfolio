@@ -82,7 +82,7 @@ const Contact = () => {
           Let's build something amazing together!
         </h2>
 
-        <div className="contactForm bg-[#090C08] m-10 text-center w-[70%]  rounded shadow-sm shadow-[#ffbd59]">
+        <div className="contactForm bg-[#090C08] m-10 text-center md:w-[50%] w-full  rounded shadow-sm shadow-[#ffbd59]">
           <form ref={form} onSubmit={sendEmail} className="m-3">
             <div className=" gap-6 mb-6">
               <div>
@@ -159,6 +159,7 @@ const Contact = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a
+                target="_blank"
                 href="https://vinaykotiyaportfolio.vercel.app"
                 className="flex items-center"
               >
@@ -184,12 +185,17 @@ const Contact = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a
+                      target="_blank"
+                      href="https://flowbite.com/"
+                      className="hover:underline"
+                    >
                       Flowbite
                     </a>
                   </li>
                   <li>
                     <a
+                      target="_blank"
                       href="https://tailwindcss.com/"
                       className="hover:underline"
                     >
@@ -205,6 +211,7 @@ const Contact = () => {
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
                     <a
+                      target="_blank"
                       href="https://github.com/Vinay-Kotiya"
                       className="hover:underline "
                     >
@@ -213,6 +220,7 @@ const Contact = () => {
                   </li>
                   <li>
                     <a
+                      target="_blank"
                       href="https://www.linkedin.com/in/vinay-kotiya-a405b6316/"
                       className="hover:underline"
                     >
@@ -230,6 +238,7 @@ const Contact = () => {
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a
+                target="_blank"
                 href="https://www.linkedin.com/in/vinay-kotiya-a405b6316/"
                 className="text-gray-500 hover:text-gray-900 mx-3 dark:hover:text-white"
               >
@@ -239,6 +248,7 @@ const Contact = () => {
                 ></img>
               </a>
               <a
+                target="_blank"
                 href="https://github.com/Vinay-Kotiya"
                 className="text-gray-500 hover:text-gray-900 mx-3 dark:hover:text-white"
               >
@@ -248,7 +258,8 @@ const Contact = () => {
                 ></img>
               </a>
               <a
-                href="https://www.instagram.com/vinay_kotiya7714_/"
+                target="_blank"
+                href="https://www.instagram.com/vinay_kotiya_/"
                 className="text-gray-500 hover:text-gray-900 mx-3 dark:hover:text-white"
               >
                 <img
