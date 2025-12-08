@@ -78,6 +78,14 @@ const Projects = () => {
       deployedUrl: "https://mysterymessagesbyvk.vercel.app/",
     },
     {
+      projectName: "VK Creative Web Website",
+      projectDescription:
+        "A Creative website that Built Using Next.Js ,Tailwind CSS and GSAP  ",
+      screenSortUrl:
+        "https://i.ibb.co/V0TnHdBk/Screenshot-2025-12-09-003153.png",
+      deployedUrl: "https://vk-creative-web.vercel.app/",
+    },
+    {
       projectName: "Quiz Game",
       projectDescription:
         "React.Js, Tailwind css, Spline (Project of Skillsvarz 0.1 Hackathon)",
