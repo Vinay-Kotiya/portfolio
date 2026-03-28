@@ -5,7 +5,9 @@ import profilePic from "../assets/profile_front.jpg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // import resume from "../assets/Vinay Kotiya (MERN Stack) resume.pdf";
-import resume from "../assets/Vinay Kotiya (Software Developer) resume.pdf";
+// import resume from "../assets/Vinay Kotiya (Software Developer) resume.pdf";
+import resume from "../assets/Vinay Kotiya (Software Developer) New Resume.pdf";
+
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
@@ -50,7 +52,7 @@ const Hero = () => {
         //   end: "top 50%", // End when top hits 50% of viewport
         //   scrub: true, // Smooth scrubbing effect
         // },
-      }
+      },
     );
     gsap.fromTo(
       heroImg.current,
@@ -59,7 +61,7 @@ const Hero = () => {
         opacity: 1,
         x: 0,
         duration: 1,
-      }
+      },
     );
   }, []);
 
